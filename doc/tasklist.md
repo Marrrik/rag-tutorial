@@ -14,7 +14,7 @@
 | 1 | Демо-данные Kaggle | ✅ | JSON читается, ≥5 датасетов |
 | 2 | Ingestion | ✅ | `documents.jsonl` создан |
 | 3 | Chunking | ✅ | `chunks.jsonl`, тест chunking |
-| 4 | Индекс TF-IDF | ⬜ | файлы в `data/index/` |
+| 4 | Индекс TF-IDF | ✅ | файлы в `data/index/` |
 | 5 | Retrieval | ⬜ | top-k + score в консоли |
 | 6 | Demo-ответ | ⬜ | ответ + источники без UI |
 | 7 | Streamlit UI | ⬜ | 3 demo-вопроса в браузере |
@@ -24,8 +24,8 @@
 
 **Легенда:** ⬜ не начато · 🔄 в работе · ✅ готово · ❌ блокер
 
-**Текущая итерация:** 4  
-**Готовность MVP:** 4 / 11
+**Текущая итерация:** 5  
+**Готовность MVP:** 5 / 11
 
 ---
 
@@ -85,8 +85,8 @@ uv run pytest tests/test_chunking.py -v
 
 ## Итерация 4 — Индекс TF-IDF
 
-- [ ] `scripts/build_index.py` — ingest + chunk + TF-IDF fit
-- [ ] Сохранение: `data/index/vectorizer.pkl`, `matrix.npz`, `chunks.jsonl`
+- [x] `scripts/build_index.py` — ingest + chunk + TF-IDF fit
+- [x] Сохранение: `data/index/vectorizer.pkl`, `matrix.npz`, `chunks.jsonl`
 
 **Проверка:**
 ```bash
